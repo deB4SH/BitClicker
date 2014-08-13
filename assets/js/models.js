@@ -19,16 +19,30 @@ var bitcount = new function(){
  */
 var hand = new function(){
     this.costs = 100;
-    this.generatedIncome = 1;
+    this.generatedIncome = 0.1;
     this.incomemultiplier = 1;
     this.amount = 1;
     
-    this.getGeneratedIncome = function(){
+    this.call = 0;
+    
+    this.getGeneratedIncomeStr = function(){
         return this.generatedIncome * this.incomemultiplier * this.amount;
+    }
+    
+    this.getGeneratedIncome = function(){
+        this.call = this.call + 1;
+        if(this.call == 10)
+            { this.call = 0; return this.generatedIncome * this.incomemultiplier * this.amount; }
+        else
+            { return 0; }
     }
     
     this.income = function(){
         bitcount.addBit(this.getGeneratedIncome());
+    }
+    
+    this.renderElement = function(){
+        
     }
 }
 
@@ -37,6 +51,10 @@ var discette = new function(){
     this.generatedIncome = 5;
     this.incomemultiplier = 1;
     this.amount = 0;
+    
+    this.getGeneratedIncomeStr = function(){
+        return this.generatedIncome * this.incomemultiplier * this.amount;
+    }
     
     this.getGeneratedIncome = function(){
         return this.generatedIncome * this.incomemultiplier * this.amount;
