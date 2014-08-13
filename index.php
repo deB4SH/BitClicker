@@ -95,6 +95,17 @@
                         </div>
                     </div>
                     
+                    <div class="col-md-3-box">
+                        <div class="panel panel-default">
+                            <div class="panel-heading col-md-3-box-heading">
+                              <h3 class="panel-title">Miscellaneous</h3>
+                            </div>
+                            <div class="panel-body link-body">
+                                build 0.0.1 alpha
+                            </div>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
         </div>
