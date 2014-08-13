@@ -18,3 +18,11 @@
 .center{
     text-align: center;
 }
+
+.col-md-3-box{
+    margin-top:20px;
+}
+
+.col-md-3-box-heading{
+    padding: 5px !important;
+}
