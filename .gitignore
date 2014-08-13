@@ -1,2 +1,6 @@
-.properties
-.xml
+//FILES
+*.properties
+*.xml
+
+//FOLDER
+/nbproject
