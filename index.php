@@ -1,18 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>[BITCLICKER]</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
         <link href="assets/css/core.css" rel="stylesheet" type="text/css"/>
-        <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-        <!-- Optional theme -->
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
-        <!-- Latest compiled and minified JavaScript -->
-        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-        
     </head>
     <body>
         
@@ -60,7 +54,7 @@
                               <h3 class="panel-title">Bitbox</h3>
                             </div>
                             <div class="panel-body">
-                                
+                                <div id="bitcount">0 Bits a</div>
                               0 Bits per secound :(
                             </div>
                         </div>
@@ -82,7 +76,10 @@
             </div>
         </div>
              
-        
+        <!-- CDN JS -->
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="assets/js/game.js" type="text/javascript"></script>
     </body>
 </html>
 
