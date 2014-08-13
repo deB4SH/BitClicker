@@ -54,8 +54,8 @@
                               <h3 class="panel-title">Bitbox</h3>
                             </div>
                             <div class="panel-body">
-                                <div id="bitcount">0 Bits a</div>
-                              0 Bits per secound :(
+                                <div id="bitcount">0 Bits</div>
+                                <div id="bitcountps">0 Bits per Secound</div>
                             </div>
                         </div>
                     </div>
@@ -79,6 +79,7 @@
         <!-- CDN JS -->
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
         <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="assets/js/models.js" type="text/javascript"></script>
         <script src="assets/js/game.js" type="text/javascript"></script>
     </body>
 </html>
