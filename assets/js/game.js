@@ -25,6 +25,7 @@ function gameLoop(){
     
     $('#bitcountps').text(roundNumber(this.bitcountpsStr,2) + " Bits per secound");
     $('#bitcount').text(roundNumber(bitcount.getBit(),2) + " Bits");
+    window.document.title = "[" + roundNumber(bitcount.getBit(),2) + "]-[Bit] BitClicker";
 }
 
 setInterval(saveLoop, 1000)

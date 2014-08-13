@@ -27,11 +27,34 @@
                         <div class="panel panel-success">
                             <div class="panel-heading col-md-3-box-heading">
                                 <h3 class="panel-title">
-                                    Discette
+                                    Hand
                                 </h3>
+                                <div class="panel-title-button">
+                                    <button type="button" class="btn btn-xs btn-info">
+                                        Upgrade
+                                    </button>
+                                </div>
                             </div>
                             <div class="panel-body">
-                              
+                                Per Secound: 0.1 Bits <br/>
+                                Update: 4 Bits <br/>
+                            </div>
+                        </div>
+                        
+                        <div class="panel panel-success">
+                            <div class="panel-heading col-md-3-box-heading">
+                                <h3 class="panel-title">
+                                    Discette
+                                </h3>
+                                <div class="panel-title-button">
+                                    <button type="button" class="btn btn-xs btn-info">
+                                        Upgrade
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="panel-body">
+                                Per Secound: 4 Bits <br/>
+                                Update: 4 Bits <br/>
                             </div>
                         </div>
                         
@@ -59,8 +82,8 @@
                             </div>
                         </div>
                     </div>
-                        
-                    <div class="col-md-3-box">´
+                    
+                    <div class="col-md-3-box">
                         <div class="panel panel-default">
                             <div class="panel-heading col-md-3-box-heading">
                               <h3 class="panel-title">Navigation</h3>

@@ -35,3 +35,8 @@
 .panel-title{
     font-weight: bold;
 }
+
+.panel-title-button{
+    float: right;
+    margin-top: -20px;
+}
