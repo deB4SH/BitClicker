@@ -1,0 +1,20 @@
+/* 
+    LASTUPDATE: 13.08.2014
+*/
+
+.container{
+    width: 100% !important;
+}
+
+.navigation-line{
+    background-color: #333333;
+    color: #cccccc;
+    font-size: 1em;
+    font-weight: bold;
+    padding-bottom: 3px;
+    padding-top: 2px;
+}
+
+.center{
+    text-align: center;
+}
