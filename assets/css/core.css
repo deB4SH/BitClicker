@@ -26,3 +26,12 @@
 .col-md-3-box-heading{
     padding: 5px !important;
 }
+
+.link-body li{
+    margin-left: 15px;
+    list-style: none;
+}
+
+.panel-title{
+    font-weight: bold;
+}

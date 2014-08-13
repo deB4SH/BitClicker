@@ -33,11 +33,11 @@
                         <div class="panel panel-success">
                             <div class="panel-heading col-md-3-box-heading">
                                 <h3 class="panel-title">
-                                    Panel title
+                                    Discette
                                 </h3>
                             </div>
                             <div class="panel-body">
-                              Panel content
+                              
                             </div>
                         </div>
                         
@@ -45,13 +45,19 @@
                     
                    
                 </div>         
-                <div class="col-md-6 center">col-md-6</div>
+                
+                <!-- Middel -->
+                <div class="col-md-6 center">
+                    <a href="#"><img src="assets/img/dot.png"  class="bitbutton"/></a>
+                </div>
+                
+                
                 <div class="col-md-3">
                     
                     <div class="col-md-3-box">
                         <div class="panel panel-default">
                             <div class="panel-heading col-md-3-box-heading">
-                              <h3 class="panel-title">Bit.Crate</h3>
+                              <h3 class="panel-title">Bitbox</h3>
                             </div>
                             <div class="panel-body">
                                 
@@ -65,7 +71,7 @@
                             <div class="panel-heading col-md-3-box-heading">
                               <h3 class="panel-title">Navigation</h3>
                             </div>
-                            <div class="panel-body">
+                            <div class="panel-body link-body">
                                 <li>Home</li>
                                 <li>Settings</li>
                             </div>
