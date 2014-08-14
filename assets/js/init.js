@@ -12,6 +12,12 @@ else{
 
 //create income-modules
 incomeObjects = new Array(
-                            incomeEntity.construct("Hand",1,0.1,1,1),
-                            incomeEntity.construct("Discette",5,1,5,1)
+                            new incomeEntity(),
+                            new incomeEntity()
                          );
+
+incomeObjects[0].construct("Hand",1,0.1,1,1);
+incomeObjects[1].construct("Derp",1,0.1,1,1);
+
+console.log(incomeObjects);
+console.log("init done");

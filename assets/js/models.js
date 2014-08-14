@@ -19,7 +19,7 @@ var bitcount = new function(){
  * - follows singleton pattern :)
  */
 
-var incomeEntity = new function(){
+function incomeEntity(){
     
     this.name = "";
     
