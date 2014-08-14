@@ -3,9 +3,15 @@
  */
 
 if(localStorage['bitcount'] != "NaN"){
-    incomeObjects = localStorage['incomeObjects'];
     bitcount.addBit(parseFloat(localStorage['bitcount']));
 }
 else{
-    console.log(localStorage['bitcount']);
+    localStorage['bitcount'] = 0;
+    bitcount.addBit(parseFloat(localStorage['bitcount']));
 }
+
+//create income-modules
+incomeObjects = new Array(
+                            incomeEntity.construct("Hand",1,0.1,1,1),
+                            incomeEntity.construct("Discette",5,1,5,1)
+                         );

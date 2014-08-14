@@ -16,51 +16,58 @@ var bitcount = new function(){
 
 /*
  * Income Models
+ * - follows singleton pattern :)
  */
-var hand = new function(){
-    this.costs = 100;
-    this.generatedIncome = 0.1;
-    this.incomemultiplier = 1;
-    this.amount = 1;
-    
-    this.call = 0;
-    
-    this.getGeneratedIncomeStr = function(){
-        return this.generatedIncome * this.incomemultiplier * this.amount;
-    }
-    
-    this.getGeneratedIncome = function(){
-        this.call = this.call + 1;
-        if(this.call == 10)
-            { this.call = 0; return this.generatedIncome * this.incomemultiplier * this.amount; }
-        else
-            { return 0; }
-    }
-    
-    this.income = function(){
-        bitcount.addBit(this.getGeneratedIncome());
-    }
-    
-    this.renderElement = function(){
-        
-    }
-}
 
-var discette = new function(){
-    this.costs = 100;
-    this.generatedIncome = 5;
-    this.incomemultiplier = 1;
-    this.amount = 0;
+var incomeEntity = new function(){
     
-    this.getGeneratedIncomeStr = function(){
-        return this.generatedIncome * this.incomemultiplier * this.amount;
+    this.name = "";
+    
+    this.costs = parseInt(0);
+    this.generatedIncome = parseFloat(0.0);
+    this.generatedIncomeMultiplier = parseFloat(0.0);
+    this.amount = parseInt(0);
+    
+    this.construct = function(name,costs,income,incomemultiplier,amount){
+        this.name = name;
+        this.costs = costs;
+        this.generateIncome = income;
+        this.generatedIncomeMultiplier = incomemultiplier;
+        this.amount = amount;
     }
     
-    this.getGeneratedIncome = function(){
-        return this.generatedIncome * this.incomemultiplier * this.amount;
+    this.getIncomeString = function(){
+        return this.generatedIncome * this.generatedIncomeMultiplier * this.amount;
     }
     
-    this.income = function(){
-        bitcount.addBit(this.getGeneratedIncome());
+    this.getIncome = function(){
+        return parseFloat(this.generatedIncome * this.generatedIncomeMultiplier * this.amount);
+    }
+    
+    this.generateIncome = function(){
+        bitcount.addBit(this.getIncome());
+    }
+    
+    //GUI
+    this.renderElement = function(){
+                
+        htmlTempalte =  '<div class="panel panel-success">'+
+                        '<div class="panel-heading col-md-3-box-heading">' + 
+                        '<h3 class="panel-title">' +
+                        this.name + 
+                        '</h3>'+
+                        '<div class="panel-title-button">' + 
+                        '<button type="button" class="btn btn-xs btn-info">'+
+                        'Upgrade' + 
+                        '</button>' +
+                        '</div>' +
+                        '</div>' +
+                        '<div class="panel-body">' +
+                        'Per Secound:' + this.getIncome()+ ' Bits <br/>' +
+                        '</div>' +
+                        '</div>';
+        
+        return htmlTempalte;
+        
     }
 }
