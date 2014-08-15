@@ -1,32 +1,16 @@
 /*
- * Basic JQuery Calls
+ * JQuery Links
  */
 $('.bitbutton').click(function(){
    bitcount.addBit(1);
 });
 
-/*
- * GameLoop Related
- */
 
-setInterval(gameLoop,100);
-function gameLoop(){
+Game.render = function(){
+    $('#bitcountps').text(roundNumber(Game.bitcountps,2) + " Bits per secound");
+    $('#bitcount').text(roundNumber(Game.bitcount.getBit(),2) + " Bits");
+    window.document.title = "[" + roundNumber(Game.bitcount.getBit(),2) + "]-[Bit] BitClicker";
     
-    //Income
-    bitcountps = parseFloat(0);
-    bitcountpsStr = parseFloat(0);
-//    for(var i=0; i < incomeObjects.length; i++){
-//        this.bitcountps = parseFloat(this.bitcountps + incomeObjects[i].getGeneratedIncome());
-//        this.bitcountpsStr = parseFloat(this.bitcountpsStr + incomeObjects[i].getGeneratedIncomeStr());
-//        
-//    }
-    bitcount.addBit(roundNumber(bitcountps,2));
-    
-    $('#bitcountps').text(roundNumber(this.bitcountpsStr,2) + " Bits per secound");
-    $('#bitcount').text(roundNumber(bitcount.getBit(),2) + " Bits");
-    window.document.title = "[" + roundNumber(bitcount.getBit(),2) + "]-[Bit] BitClicker";
-    
-    //render income modules
     renderIncomeElements = "";
     for(var i=0; i < incomeObjects.length; i++){
         renderIncomeElements = renderIncomeElements + incomeObjects[i].renderElement();
@@ -34,8 +18,38 @@ function gameLoop(){
     $('#incomemodels').replaceWith(renderIncomeElements);
 }
 
-setInterval(saveLoop, 1000)
-function saveLoop(){
+Game.update = function() {
+    
+    //generate income
+    for(var i=0; i < incomeObjects.length; i++){
+        this.bitcountps = parseFloat(this.bitcountps + incomeObjects[i].getGeneratedIncome());
+        this.bitcountpsStr = parseFloat(this.bitcountpsStr + incomeObjects[i].getGeneratedIncomeStr());
+        
+    }
+    Game.bitcount.addBit(roundNumber(Game.bitcountps,2));
+    
+}
+
+Game.run = function(){
+    Game.update();
+    Game.render();
+}
+
+Game.saveLoop = function(){
     localStorage['bitcount'] = roundNumber(bitcount.getBit(),2);
-    localStorage['incomeObjects'] = incomeObjects;
+    $('.hovermarker').tooltip(saveTooltipOptions).tooltip("toggle");
+    sleep(2000,hideSaveTooltip);
+}
+
+Game._intervalId = setInterval(Game.run, 1000 / Game.fps);
+Game._saveIntervalID = setInterval(Game.saveLoop, 50000 / Game.fps);
+
+function sleep(millis, callback){
+    setTimeout(function(){
+        callback();
+    }, millis);
+}
+
+function hideSaveTooltip(){
+    $('.hovermarker').tooltip(saveTooltipOptions).tooltip("toggle");
 }
