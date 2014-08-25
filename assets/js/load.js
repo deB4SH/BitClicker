@@ -15,13 +15,24 @@ if(localStorage['bitcount'] > 0){
 
 //Create IncomeObjects
 incomeObjects = new Array(
-                            new incomeEntity(),
-                            new incomeEntity()
+                            new incomeEntity(), //0
+                            new incomeEntity(), //1
+                            new incomeEntity(), //2
+                            new incomeEntity(), //3
+                            new incomeEntity(), //4
+                            new incomeEntity(), //5
+                            new incomeEntity(), //6
+                            new incomeEntity() //7
                          );
 
-incomeObjects[0].construct("Hand",1,0.1,1,1);
-incomeObjects[1].construct("Derp",1,0.1,1,1);
-
+incomeObjects[0].construct("User",1,0.1,1,1);
+incomeObjects[1].construct("Webserver",1,0.1,1,1);
+incomeObjects[2].construct("Mailserver",1,0.1,1,1);
+incomeObjects[3].construct("VPN Socket",1,0.1,1,1);
+incomeObjects[4].construct("Myhnecraft Server",1,0.1,1,1);
+incomeObjects[5].construct("Versus-Strike 1.6",1,0.1,1,1);
+incomeObjects[6].construct("Fume-Content Server",1,0.1,1,1);
+incomeObjects[7].construct("Social Network",1,0.1,1,1);
 
 /*
  * Bootstrap GUI Features

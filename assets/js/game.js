@@ -8,8 +8,8 @@ $('.bitbutton').click(function(){
 
 Game.render = function(){
     $('#bitcountps').text(roundNumber(Game.bitcountps,2) + " Bits per secound");
-    $('#bitcount').text(roundNumber(Game.bitcount.getBit(),2) + " Bits");
-    window.document.title = "[" + roundNumber(Game.bitcount.getBit(),2) + "]-[Bit] BitClicker";
+    $('#bitcount').text(roundNumber(Game.bitcount,2) + " Bits");
+    window.document.title = "[" + roundNumber(Game.bitcount,2) + "]-[Bit] BitClicker";
     
     renderIncomeElements = "";
     for(var i=0; i < incomeObjects.length; i++){
@@ -20,13 +20,13 @@ Game.render = function(){
 
 Game.update = function() {
     
-    //generate income
-    for(var i=0; i < incomeObjects.length; i++){
-        this.bitcountps = parseFloat(this.bitcountps + incomeObjects[i].getGeneratedIncome());
-        this.bitcountpsStr = parseFloat(this.bitcountpsStr + incomeObjects[i].getGeneratedIncomeStr());
-        
-    }
-    Game.bitcount.addBit(roundNumber(Game.bitcountps,2));
+//    //generate income
+//    for(var i=0; i < incomeObjects.length; i++){
+//        this.bitcountps = parseFloat(this.bitcountps + incomeObjects[i].getGeneratedIncome());
+//        this.bitcountpsStr = parseFloat(this.bitcountpsStr + incomeObjects[i].getGeneratedIncomeStr());
+//        
+//    }
+   // Game.bitcount.addBit(roundNumber(Game.bitcountps,2));
     
 }
 
@@ -42,7 +42,7 @@ Game.saveLoop = function(){
 }
 
 Game._intervalId = setInterval(Game.run, 1000 / Game.fps);
-Game._saveIntervalID = setInterval(Game.saveLoop, 50000 / Game.fps);
+Game._saveIntervalID = setInterval(Game.saveLoop, 5000000 / Game.fps);
 
 function sleep(millis, callback){
     setTimeout(function(){
