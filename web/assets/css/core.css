@@ -1,0 +1,47 @@
+/* 
+    LASTUPDATE: 13.08.2014
+*/
+
+.container{
+    width: 100% !important;
+}
+
+.navigation-line{
+    background-color: #333333;
+    color: #cccccc;
+    font-size: 1em;
+    font-weight: bold;
+    padding-bottom: 3px;
+    padding-top: 2px;
+}
+
+.center{
+    text-align: center;
+}
+
+.col-md-3-box{
+    margin-top:20px;
+}
+
+.col-md-3-box-heading{
+    padding: 5px !important;
+}
+
+.link-body li{
+    margin-left: 15px;
+    list-style: none;
+}
+
+.panel-title{
+    font-weight: bold;
+}
+
+.panel-title-button{
+    float: right;
+    margin-top: -20px;
+}
+
+.hovermarker{
+    width: 120px;
+    margin-bottom: 0px;
+}
