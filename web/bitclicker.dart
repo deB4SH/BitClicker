@@ -11,9 +11,6 @@ part 'assets/dart/models.dart';
 Wallet bitWallet;
 List<Building> building;
 
-Timer timer = new Timer(const Duration(seconds: 1), incomeGeneration());
-
-
 void setup(){
   bitWallet = new Wallet(0.0, 0.0);
   building = new List<Building>();
@@ -28,11 +25,29 @@ void setup(){
   
   //setup mouse binding and keyboard binding
   querySelector(".bitbutton").onClick.listen(clickBit);
+  
+  timer = new Timer.repeating(const Duration(seconds: 1), update());
 }
+
+
+
+/*
+ * Game Functions 
+ */
 
 void main() {
   setup();
   
+}
+
+void update(){
+  incomeGeneration();
+  updateGUI();
+}
+
+void updateGUI(){
+  querySelector("#bitcount").text(bitWallet.getAmount().toString() +  " Bits");
+  print("updated gui");
 }
 
 void incomeGeneration(){
@@ -48,7 +63,6 @@ void clickBit(MouseEvent event){
   bitWallet.clickCoin();
   print(bitWallet.getAmount());
 }
-
 
 void reverseText(MouseEvent event) {
   var text = querySelector("#sample_text_id").text;

@@ -32,7 +32,7 @@ class Building{
   double _incomeMultiplier = 1.0;
   
   int _level = 0;
-  double _levelupCosts = 0;
+  double _levelupCosts = 0.0;
   double _levelupCostsMultiplier;
   
   Building(String buildingName, String buildingDesc, double buildingIncome, double levelupCosts, double levelupMultiplier, Wallet wallet){
