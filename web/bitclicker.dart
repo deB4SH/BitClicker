@@ -3,22 +3,34 @@ library bitclicker;
 import 'dart:html';
 part 'assets/dart/models.dart';
 
+/*
+ * Data
+ */ 
+
 Wallet bitWallet;
 
+
+//initialises the game
 void setup(){
-  bitWallet = new Wallet(0,0);
+  bitWallet = new Wallet(0.0, 0.0);
 }
 
-void clickBit(){
+void main() {
+  setup();
+  querySelector(".bitbutton")
+      ..onClick.listen(clickBit);
+}
+
+
+/*
+ * Mouse Events
+ */
+
+void clickBit(MouseEvent event){
   bitWallet.clickCoin();
   print(bitWallet.getAmount());
 }
 
-void main() {
-  
-  querySelector(".bitbutton")
-      ..onClick.listen(clickBit);
-}
 
 void reverseText(MouseEvent event) {
   var text = querySelector("#sample_text_id").text;
