@@ -20,7 +20,11 @@ class Wallet{
   
   double getAmount(){
     return _amount;
-  } 
+  }
+  
+  String getAmountStr(){
+    return _amount.toString();
+  }
 }
 
 class Building{

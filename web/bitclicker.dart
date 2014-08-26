@@ -46,7 +46,7 @@ void update(){
 }
 
 void updateGUI(){
-  querySelector("#bitcount").text(bitWallet.getAmount().toString() +  " Bits");
+  querySelector("#bitcount").text("" + bitWallet.getAmountStr() +  " Bits");
   print("updated gui");
 }
 
