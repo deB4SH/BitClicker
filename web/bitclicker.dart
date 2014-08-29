@@ -25,8 +25,7 @@ void setup(){
   
   //setup mouse binding and keyboard binding
   querySelector(".bitbutton").onClick.listen(clickBit);
-  
-  timer = new Timer.repeating(const Duration(seconds: 1), update());
+  timer = new Timer.periodic(const Duration(seconds: 1), update);
 }
 
 
@@ -46,7 +45,8 @@ void update(){
 }
 
 void updateGUI(){
-  querySelector("#bitcount").text("" + bitWallet.getAmountStr() +  " Bits");
+  print(bitWallet.getAmount());
+  //querySelector("#bitcount").text("" +  +  " Bits");
   print("updated gui");
 }
 

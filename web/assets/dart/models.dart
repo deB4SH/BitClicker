@@ -21,10 +21,6 @@ class Wallet{
   double getAmount(){
     return _amount;
   }
-  
-  String getAmountStr(){
-    return _amount.toString();
-  }
 }
 
 class Building{
@@ -71,6 +67,32 @@ class Building{
   
   void levelUp(){
     
+  }
+  
+  /*
+       *  <div class="panel panel-success">
+       *    <div class="panel-heading col-md-3-box-heading">
+       *      <h3 class="panel-title">Building OBJ</h3>
+       *      <div class="panel-title-button">
+       *        <button type="button" class="btn btn-xs btn-info">Upgrade</button>
+       *      </div>
+       *    </div>
+       *    <div class="panel-body">Per Secound:0 Bits <br>
+       *    </div>
+       *  </div> 
+   */
+  
+  String renderElement(){
+    return  '<div class="panel panel-success">'                                   +
+            '<div class="panel-heading col-md-3-box-heading">'                    +
+            '<h3 class="panel-title">' + this._name + '</h3>'                     +
+            '<div class="panel-title-button">'                                    + 
+            '<button type="button" class="btn btn-xs btn-info">Upgrade</button>'  +
+            '</div>'                                                              +
+            '</div>'                                                              +
+            '<div class="panel-body">' + this.getIncome().toString() + '<br>'                     +
+            '</div>'                                                              +
+            '</div>'                                                              ;  
   }
   
 }
