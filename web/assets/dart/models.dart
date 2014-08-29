@@ -90,7 +90,7 @@ class Building{
             '<button type="button" class="btn btn-xs btn-info">Upgrade</button>'  +
             '</div>'                                                              +
             '</div>'                                                              +
-            '<div class="panel-body">' + this.getIncome().toString() + '<br>'                     +
+            '<div class="panel-body">' + this.getIncome().toString() + '<br>'     +
             '</div>'                                                              +
             '</div>'                                                              ;  
   }

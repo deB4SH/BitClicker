@@ -10,6 +10,7 @@ part 'assets/dart/models.dart';
 
 Wallet bitWallet;
 List<Building> building;
+Timer timer;
 
 void setup(){
   bitWallet = new Wallet(0.0, 0.0);
@@ -39,15 +40,14 @@ void main() {
   
 }
 
-void update(){
+void update(Timer timer){
   incomeGeneration();
   updateGUI();
 }
 
 void updateGUI(){
-  print(bitWallet.getAmount());
-  //querySelector("#bitcount").text("" +  +  " Bits");
-  print("updated gui");
+  String amount = "" + bitWallet.getAmount().toString()  +  " Bits";
+  querySelector("#bitcount").text = amount;
 }
 
 void incomeGeneration(){
